@@ -451,7 +451,7 @@
                 btn.textContent = page.title;
                 btn.onclick = (e) => {
                     e.stopPropagation();
-                    loadSVG(page, btn);
+                    loadSVG(page, btn, kit.pdf);
                     updateURL(kIndex, pIndex); // Update URL when user clicks
                 };
                 pagesList.appendChild(btn);
