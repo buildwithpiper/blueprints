@@ -442,6 +442,10 @@
             header.onclick = () => {
                 const isOpen = group.classList.toggle('open');
                 header.setAttribute('aria-expanded', isOpen);
+                if (isOpen) {
+                    loadSVG(kit.pages[0], document.getElementById(`page-btn-${kIndex}-0`), kit.pdf);
+                    updateURL(kIndex, 0); // Update URL when user clicks
+                }
             };
             
             const pagesList = document.createElement('div');
